@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="flambush.MainPage" BackgroundColor="#fff">
+
+    <StackLayout>
+        <StackLayout>
+            <Image Source="mat_vector" HorizontalOptions="EndAndExpand" VerticalOptions="Start" Aspect="AspectFit" HeightRequest="200"/>
+        </StackLayout>
+        <StackLayout>
+            <Image Source="welcome_logo" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" WidthRequest="180"/>
+        </StackLayout>
+        <StackLayout>
+            <Image Source="big_eclipse_g" Margin="20,0,0,0" WidthRequest="80"/>
+            <Image Source="sm_eclipse_g" Margin="70,0,0,0" WidthRequest="30"/>
+        </StackLayout>
+        <StackLayout Padding="20">
+            <Button Text="Lets Get Started" CornerRadius="10" Clicked="letsGetStarted_Clicked" BackgroundColor="#2ECC71" TextColor="#fff"/>
+        </StackLayout>
+        <StackLayout Padding="30,20,30,30">
+            <Label Text="Privacy policy" HorizontalOptions="EndAndExpand" />
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

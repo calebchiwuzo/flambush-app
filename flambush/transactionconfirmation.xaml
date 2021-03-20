@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="flambush.transactionconfirmation">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                       <!-- <Image Source="icon_back" WidthRequest="40" Margin="20" VerticalOptions="Start" HorizontalOptions="StartAndExpand"/>-->
+                        <Image Source="mat_vector" HorizontalOptions="EndAndExpand" VerticalOptions="Start" Aspect="AspectFit" HeightRequest="200"/>
+                    </StackLayout>
+                    <StackLayout Padding="60,0,60,10">
+                        <Image Source="big_eclipse_g" Margin="-330,-20,0,0" WidthRequest="65"/>
+                    </StackLayout>
+                    <StackLayout Padding="60,0,60,10">
+                        <Image Source="big_eclipse_g" Margin="0,-10,-270,0" WidthRequest="65"/>
+                        <Image Source="sm_eclipse_g" Margin="0,-20,-360,0" WidthRequest="30"/>
+                        <StackLayout Margin="0,-100,0,0" Padding="20,0,20,0">
+                            <Image Source="icon_check" HeightRequest="60" HorizontalOptions="CenterAndExpand"/>
+                            <Label Text="Your transaction has been submitted successfully and is currently PROCESSING..." HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"></Label>
+                            <Button Margin="0,10,0,0" Text="View transactions" CornerRadius="20" BackgroundColor="#2ECC71" FontSize="12" HeightRequest="40" TextColor="#fff" HorizontalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Padding="60,0,60,10">
+                        <Image Source="big_eclipse_g" Margin="0,-15,0,0" WidthRequest="65"/>
+                    </StackLayout>
+                    <StackLayout Padding="40,30,40,10">
+                        <Image Source="sm_eclipse_g" Margin="0,50,0,0" WidthRequest="30"/>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

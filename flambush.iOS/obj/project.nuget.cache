@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "5LmtwQ0NEx3oMjzDjiL7H+xonivHPB5HAiwoTXKXzmSIGJaHMgUeNxsQXnuliGP416viUwqJ8Te4+C2ofjXrvQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\flambush\\flambush.iOS\\flambush.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\xamarin.auth\\1.7.0\\xamarin.auth.1.7.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\xamarin.forms\\4.6.0.1141\\xamarin.forms.4.6.0.1141.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="flambush.dashboard" BackgroundColor="#fff">
+    <ContentPage.Content>
+        <StackLayout>
+                <StackLayout>
+                    <StackLayout BackgroundColor="#2ECC71" Opacity="0.7" HeightRequest="250">
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="0,-250,0,0">
+                        <Label Text="Hi [Customer]" Padding="20,40,20,20" TextColor="#fff" FontSize="18"/>                        
+                        <Image Source="mat_vector" HorizontalOptions="EndAndExpand" VerticalOptions="Start" Aspect="AspectFit" HeightRequest="200"/>
+                    </StackLayout>
+                    <StackLayout Margin="0,-200,0,0" HorizontalOptions="End">
+                        <Image Margin="10" Source="icon_user" HorizontalOptions="End"/>
+                        <Image Margin="10" Source="icon_bell" HorizontalOptions="End"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Frame HasShadow="False" Margin="40,-20,40,10" CornerRadius="10" BackgroundColor="#fff" Padding="10">
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout>
+                                    <Frame HasShadow="True" CornerRadius="10" VerticalOptions="CenterAndExpand" Padding="10" WidthRequest="150">
+                                        <StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label TextColor="#2ECC71" Text="Nigeria naira" VerticalOptions="Start"/>
+                                                <Image Source="nigerian_flag"/>
+                                            </StackLayout>
+                                            <Label Text="1 BTC = N 22,000,000" />
+                                            <!--<Image Source="icon_loss"/>-->
+                                            <Frame HasShadow="False" CornerRadius="10" BorderColor="#2ECC71" Padding="5">
+                                                <Label Text="Sell BTC" FontSize="12" TextColor="#2ECC71" HorizontalOptions="Center"/>
+                                            </Frame>
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Frame HasShadow="True" CornerRadius="10" VerticalOptions="CenterAndExpand" Padding="10" WidthRequest="150">
+                                        <StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                            <Label TextColor="#2ECC71" Text="Ghana cedi" VerticalOptions="Start"/>
+                                            <Image Source="ghanian_flag"/>
+                                        </StackLayout>
+                                        <Label Text="1 BTC = C 1,000,000" />
+                                       <!-- <Image Source="icon_gain"/>-->
+                                            <Frame HasShadow="False" CornerRadius="10" BorderColor="#000" Padding="5">
+                                                <Label Text="Sell BTC" FontSize="12" TextColor="#000" HorizontalOptions="Center"/>
+                                            </Frame>
+                                        </StackLayout>
+                        </Frame>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>                        
+                    </StackLayout>
+                    <StackLayout>
+                        <Image Source="big_eclipse_g" Margin="-330,-60,0,0" WidthRequest="65"/>
+                        <Image Source="sm_eclipse_g" Margin="-240,-20,0,0" WidthRequest="30"/>
+                        <Label Text="Last 5 Transactions" FontSize="18" HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Padding="20,0,20,10">
+                    <Image Source="big_eclipse_g" Margin="-70,60,0,0" WidthRequest="65"/>
+                    <Image Source="sm_eclipse_g" Margin="20,0,0,0" WidthRequest="30"/>
+                    <ListView Margin="0,-170,0,0" ItemsSource="{Binding Items}" HasUnevenRows="true" IsPullToRefreshEnabled="True"  IsRefreshing="{Binding IsRefreshing, Mode=OneWay}">
+                            <!--RefreshCommand="{Binding RefreshViewCommand}"-->
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout Padding="5">
+                                            <Grid>
+                                                <Grid.GestureRecognizers>
+                                                    <TapGestureRecognizer />
+                                                    <!-- CommandParameter="{Binding id}" Tapped="OnListViewItemTapped"-->
+                                                </Grid.GestureRecognizers>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Label  FontFamily="Monserrat" Grid.Row="0"  Grid.ColumnSpan="2" Text="{Binding trans_date}" FontSize="11" VerticalOptions="End" TextColor="Gray" />
+                                                <!--<ActivityIndicator IsRunning="True" Color="orange" Opacity=".5" IsVisible="{Binding IsIndicatorVisible}" HorizontalOptions="Center" VerticalOptions="Center"/>-->
+                                                <Label Grid.Row="1" Grid.Column="1" MaxLines="1" LineBreakMode="TailTruncation" Text="{Binding trans}" TextColor="#000" />
+                                                <Label Grid.Row="1" Grid.Column="2" MaxLines="1" LineBreakMode="TailTruncation" Text="{Binding trans_rate}" TextColor="#000"/>
+                                                <Label Grid.Row="1" Grid.Column="3" MaxLines="1" LineBreakMode="TailTruncation" Text="{Binding trans_status}" TextColor="#000" />
+                                            </Grid>
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal" Padding="20,0,20,20">
+                            <Image Source="customer_support" HeightRequest="50" HorizontalOptions="StartAndExpand"/>
+                        <Button Text="View all transactions" CornerRadius="20" BackgroundColor="#2ECC71" FontSize="9" TextColor="#fff" HeightRequest="30" HorizontalOptions="End" />
+                    </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
